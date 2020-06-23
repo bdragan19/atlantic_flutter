@@ -1,0 +1,42 @@
+[
+    {
+      "pk": 613234,
+      "name": "Bruce Lee’s Legacy Is Inescapable. That Makes Him Harder to Find.",
+      "author": "Danny Chau",
+      "country": "Spain",
+      "image": "https://cdn.theatlantic.com/thumbor/lfJCR37MwcLP-LvvRa4bmVWLA9g=/438x0:1563x1125/500x500/filters:format(png)/media/img/mt/2020/06/Atlantic_Bruce_Lee_v1/original.png",
+      "abv": "5%"
+    },
+    {
+      "pk": 5095,
+      "name": "A Common Snake Oil Reemerges for the Coronavirus",
+      "author": "Olga Khazan",
+      "country": "Germany",
+      "image": "https://cdn.theatlantic.com/thumbor/PdWS3oWHdKG43ZxOI2PCtwoMdLA=/438x0:1563x1125/500x500/filters:format(png)/media/img/mt/2020/06/Atlantic_silver_v2/original.png",
+      "abv": "7.7%"
+    },
+    {
+      "id": 1510936,
+      "name": "The Questions That Will Get Me Through the Pandemic",
+      "country": "Poland",
+      "author": "John Dickerson",
+      "image": "https://cdn.theatlantic.com/thumbor/qQ8Fw94vp4xl_O0CVqbZTA-IfOk=/670x659:4720x4709/500x500/media/img/mt/2020/06/quarantine/original.jpg",
+      "abv": "7.1%"
+    },
+    {
+      "id": "d320a502-5371-4707-927f-d53ca36b972f3",
+      "name": "Peroni",
+      "country": "Italy",
+      "author": "Abdallah Fayyad",
+      "image": "https://www.barcelonabeercompany.com/archivos/beer-barcelona-beer_140716141755.jpg",
+      "abv": "5.1%"
+    },
+    {
+      "id": "d320a502-5371-4707-927f-d53ca36b972f4",
+      "name": "HORIZONT Japán Búza beer",
+      "country": "Hungary",
+      "author": "Abdallah Fayyad",
+      "image": "https://res.cloudinary.com/ratebeer/image/upload/w_152,h_309,c_pad,d_beer_img_default.png,f_auto/beer_268255",
+      "abv": "5.8%"
+    }
+  ]
