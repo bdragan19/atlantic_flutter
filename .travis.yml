@@ -1,4 +1,5 @@
 os: osx
+osx_image: xcode11.5
 language: generic
 before_script:
 - brew update
@@ -10,7 +11,7 @@ before_script:
 - brew install ios-deploy
 - git clone https://github.com/flutter/flutter.git -b beta --depth 1
 script:
-- flutter/bin/flutter build ios --debug --no-codesign
+- flutter/bin/flutter build ios --release --no-codesign
 cache:
   directories:
   - "$HOME/.pub-cache"
@@ -25,8 +26,8 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: I/gN5YsN6DN5ExiS9P8gkFfGg7SgUs2V8VOnhaKhBptxlz3wiWJZ3dpcWJCA86CuNvw5qaGMsfJyIalBYtk3UBFXwkCH6wajR8MiAqs7cnLkjEAqSF+2gL+DR2Mq5kZb+tokNeHnzoCS/Zuy/JYjQWO7BLa+O5UUyrPsV3o7S6JqfUXHA3rvW8M9M1tktOqknamKhiERtb7urKRZIYX+KjTYcbKWhOA4GZyrh54RLACtSUiAti2Q2LemrePrsdQgslmAPivR0PXCsW2telTWLZZqRnFLSFf8hozqQycuybcXqqqh5GQOuD8b4meZXCncVdEDNCO0dshDMI2WhNnaFXoEV1Rr/m7sATXwnAP3iJ1jaBxfJy3joKlVEFI4MqpFZnWHUXF1z/yG3lkNIWHlTVZ2lPiIZB+lclOo8P8COc1ECZjKL5H8shp3/brPvywQPtxJX9ZHttPAdDKfCvBF+/lzTo/F/NMEG30+l/EnUi88y761CXZw5jJCmqnFwKKMcfg4CHlBbEVpKtXBd3ulseq/8oLa62hpl8WTsM93mXykKRJ6VSaebf/xoN6uM3t2TQ1FI+pgNWj1j4Z2qn88kLabvFIKMe+EqHFSfMghibvKm9nRFhxLt+OnGJaMgR5NYHQAtIr+2+Qb1oZsRwkCG+0Wc0y3BL64hkD2PA7vvPk=
-  file: 'build/ios/iphoneos/app.ipa'
+    secure: j3mv/llT3Um++0iaUIbQCntQkT4x00WZm0FMwjs0+UKY0Ve5gaBYIwZRizsTvPy2rmqdGWq325kl0mKyTGbu8E32iA2u3KhpC7b7pN4tUWJEc0OQyy7/VbL7bMSK3eYL/eTCaPDzGxn/5ApF0YEG8Y0hMMdltGYriz9Z0ogKEQQtyHU9EoZOUezelfRoeA1xd59fDQbah22ssJaOLvzN++IaUa3lh1skYDWH5CJXREgiIz5K+pPGDSGRWgx7/YVplF69lLM2Iif+cAcfz4e+/iwd+XJ91FDrT7PeUQcAYawtJi9DmWBSthfe0ufhKJgwmhXOVxwJN1QHDJmc83Bk7HNuE7qDvRlmPBHc4J5eEA/TEj8IfHp2rWqOslEfnrGdaef8P3tSr6wjCrpNAMzxIlOs3JhaNkZ+KtNcG9jKV9v6B7aWNovFmMgjtsOacxq3U3+khGg8HdLzavZXLVRln6tB6RIELX57s7gNj7QdCQ5Q9OLXYDVs/q1aMYedqr/Whitx6o3MggsB10azXd9SlaOAfx0WrYqsBg+R7XOT8GLYEcnYQYINX8pgjyZGKl8o9ryKXezNAwgy+UcbHc98skFAlEgVorV/kMA/nnk/0ZkrTaJPffCCSRY1OIhv85pbB1WT4aGgBVheLXyPz20KNq8X/oep2sRy/lod58l9wRA=
+  file: build/ios/iphoneos/app.ipa
   on:
     repo: bdragan19/atlantic_flutter
   skip_cleanup: 'true'
