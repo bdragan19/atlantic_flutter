@@ -1,6 +1,8 @@
 import 'dart:io';
 import 'dart:convert';
 
+import 'package:atlantic_app/screens/saved/saved-article.dart';
+import 'package:atlantic_app/screens/saved/saved-articles.dart';
 import 'package:atlantic_app/widgets/article-actions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +12,16 @@ import 'package:http/http.dart' as http;
 
 class ArticlePage extends StatefulWidget {
   ArticlePage({Key key}) : super(key: key);
+
+  final SavedArticles savedArticles = SavedArticles();
+
+  updateSaved(SavedArticle article, bool isSaved) async {
+    if (isSaved) {
+      await savedArticles.addToSaved(article);
+    } else {
+      await savedArticles.removeFromSaved(article);
+    }
+  }
 
   @override
   ArticlePageState createState() => ArticlePageState();
@@ -37,9 +49,15 @@ class ArticlePageState extends State<ArticlePage> {
   Widget build(BuildContext context) {
     final pk = ModalRoute.of(context).settings.arguments;
 
+    final savedArticle = SavedArticle(pk: pk);
+
+    final isSaved = widget.savedArticles.isSaved(savedArticle);
+
     return Scaffold(
         appBar: AppBar(actions: [
-          ArticleActions()                      
+          ArticleActions(isSaved: isSaved, onSavedChanged: (isSaved){
+            widget.updateSaved(savedArticle, isSaved);
+          })                      
         ]),
         body: new Container(
             child: FutureBuilder(
